@@ -2,38 +2,6 @@
 
 This is a frame following the [frames.js OpenFrames](https://framesjs.org/middleware/openframes) standard, working on Base mainnet.
 
-## Usage
-
-```jsx
-function generateTransactionUrl(transaction_type, params) {
-  const baseUrl = "http://localhost:3001/";
-  let queryParams = new URLSearchParams({
-    transaction_type,
-    ...params,
-  }).toString();
-  return `${baseUrl}?${queryParams}`;
-}
-
-// Usage examples:
-let sendUrl = generateTransactionUrl("send", {
-  buttonName: "Send",
-  amount: 250,
-  token: "BTC",
-  receiver: "receiver",
-});
-let swapUrl = generateTransactionUrl("swap", {
-  buttonName: "Swap",
-  amount: 100,
-  token_from: "ETH",
-  token_to: "DAI",
-});
-let mintUrl = generateTransactionUrl("mint", {
-  buttonName: "Mint",
-  collection: "0x123456789ABCDEF",
-  token_id: 1023,
-});
-```
-
 1. **Send Transaction:**
    - **Purpose**: To send a specified amount of a cryptocurrency to a destination address.
    - **Example URL**: `http://localhost:3001/?transaction_type=send&buttonName=Send&amount=1&token=USDC`
@@ -58,18 +26,51 @@ let mintUrl = generateTransactionUrl("mint", {
      - `collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0` specifies the NFT collection.
      - `token_id=1` specifies the unique identifier of the NFT within the collection.
 
+## Testing
+
+Here are the three testing URLs based on your requirements:
+
+1. **Send 1 USDC to `0x73a333cb82862d4f66f0154229755b184fb4f5b0`:**
+
+```
+
+https://base-tx-frame.vercel.app/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
+```
+
+```
+http://localhost:3001/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
+```
+
+2. **Swap 1 USDC to DAI:**
+
+```
+http://localhost:3001/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+```
+
+```
+https://base-tx-frame.vercel.app/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+```
+
+3. **Mint the collection (assuming you want to mint a specific token ID from a collection):**
+
+```
+https://base-tx-frame.vercel.app/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
+```
+
+```
+http://localhost:3001/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
+```
+
+These URLs are constructed using the `generateTransactionUrl` function pattern from your README file. Adjust the `token_id` in the mint URL if you have a specific token ID in mind.
+
+Certainly! Here are all three testing URLs together using the domain `https://base-tx-frame.vercel.app/`:
+
 ## Development
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
