@@ -27,34 +27,35 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
 
 Here are the three testing URLs based on your requirements:
 
+0.
 1. **Send 1 USDC to `0x73a333cb82862d4f66f0154229755b184fb4f5b0`:**
 
    ```
-   https://base-tx-frame.vercel.app/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
+   https://base-tx-frame.vercel.app/transaction/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
    ```
 
    ```
-   http://localhost:3000/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
+   http://localhost:3000/transaction/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
    ```
 
 2. **Swap 1 USDC to DAI:**
 
    ```
-   https://base-tx-frame.vercel.app/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+   https://base-tx-frame.vercel.app/transaction/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
    ```
 
    ```
-   http://localhost:3000/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+   http://localhost:3000/transaction/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
    ```
 
 3. **Mint the collection (with example of tokenId and collection):**
 
    ```
-   https://base-tx-frame.vercel.app/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
+   https://base-tx-frame.vercel.app/transaction/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
    ```
 
    ```
-   http://localhost:3000/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
+   http://localhost:3000/transaction/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
    ```
 
 ## Development
