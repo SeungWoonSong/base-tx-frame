@@ -27,7 +27,6 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
 
 Here are the three testing URLs based on your requirements:
 
-0.
 1. **Send 1 USDC to `0x73a333cb82862d4f66f0154229755b184fb4f5b0`:**
 
    ```
