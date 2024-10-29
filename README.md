@@ -4,7 +4,6 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
 
 1. **Send Transaction:**
    - **Purpose**: To send a specified amount of a cryptocurrency to a destination address.
-   - **Example URL**: `http://localhost:3001/?transaction_type=send&buttonName=Send&amount=1&token=USDC`
    - **Parameters**:
      - `transaction_type=send` indicates the action of sending currency.
      - `amount=250` specifies the amount of BTC to be sent.
@@ -12,7 +11,6 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
      - `receiver=` specifies the recipient's address. It’s hardcoded in the code
 2. **Swap Transaction:**
    - **Purpose**: To exchange one type of cryptocurrency for another.
-   - **Example URL**: `http://localhost:3001/?transaction_type=swap&buttonName=Swap&amount=1&token_from=ETH&token_to=DAI`
    - **Parameters**:
      - `transaction_type=swap` indicates a swap action.
      - `amount=100` specifies the amount of ETH to be exchanged.
@@ -20,7 +18,6 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
      - `token_to=DAI` specifies DAI as the currency to receive in the swap.
 3. **Mint Transaction:**
    - **Purpose**: To create (mint) a new token or NFT.
-   - **Example URL**: `http://localhost:3001/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1`
    - **Parameters**:
      - `transaction_type=mint` indicates the minting of a new NFT.
      - `collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0` specifies the NFT collection.
@@ -37,13 +34,13 @@ https://base-tx-frame.vercel.app/?transaction_type=send&buttonName=Send&amount=1
 ```
 
 ```
-http://localhost:3001/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
+http://localhost:3000/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
 ```
 
 2. **Swap 1 USDC to DAI:**
 
 ```
-http://localhost:3001/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+http://localhost:3000/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
 ```
 
 ```
@@ -57,12 +54,8 @@ https://base-tx-frame.vercel.app/?transaction_type=mint&buttonName=Mint&collecti
 ```
 
 ```
-http://localhost:3001/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
+http://localhost:3000/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
 ```
-
-These URLs are constructed using the `generateTransactionUrl` function pattern from your README file. Adjust the `token_id` in the mint URL if you have a specific token ID in mind.
-
-Certainly! Here are all three testing URLs together using the domain `https://base-tx-frame.vercel.app/`:
 
 ## Development
 
