@@ -1,0 +1,47 @@
+{
+  "name": "base-tx-frame",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./scripts/dev-script.js",
+    "dev:starter": "concurrently --kill-others \"next dev\" \"frames\"",
+    "dev:monorepo": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nextui-org/react": "^2.3.6",
+    "@xmtp/frames-validator": "^0.6.2",
+    "@zoralabs/zdk": "^2.4.0",
+    "clsx": "^2.1.1",
+    "ethers": "^5.7.2",
+    "framer-motion": "^11.2.4",
+    "frames.js": "^0.19.5",
+    "next": "14.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sharp": "0.32.6",
+    "strip-ansi": "^7.1.0",
+    "viem": "^2.9.25",
+    "wagmi": "^2.5.20"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "devDependencies": {
+    "@frames.js/debugger": "latest",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
+    "child_process": "^1.0.2",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.5"
+  }
+}
