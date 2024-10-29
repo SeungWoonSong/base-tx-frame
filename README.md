@@ -6,15 +6,15 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
    - **Purpose**: To send a specified amount of a cryptocurrency to a destination address.
    - **Parameters**:
      - `transaction_type=send` indicates the action of sending currency.
-     - `amount=250` specifies the amount of BTC to be sent.
-     - `token=BTC` indicates that Bitcoin is the currency being sent.
+     - `amount=1` specifies the amount of BTC to be sent.
+     - `token=USDC` indicates that Bitcoin is the currency being sent.
      - `receiver=` specifies the recipient's address. It’s hardcoded in the code
 2. **Swap Transaction:**
    - **Purpose**: To exchange one type of cryptocurrency for another.
    - **Parameters**:
      - `transaction_type=swap` indicates a swap action.
-     - `amount=100` specifies the amount of ETH to be exchanged.
-     - `token_from=ETH` indicates that Ethereum is the currency being swapped.
+     - `amount=1` specifies the amount of ETH to be exchanged.
+     - `token_from=USDC` indicates that Ethereum is the currency being swapped.
      - `token_to=DAI` specifies DAI as the currency to receive in the swap.
 3. **Mint Transaction:**
    - **Purpose**: To create (mint) a new token or NFT.
