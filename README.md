@@ -20,8 +20,8 @@ This is a frame following the [frames.js OpenFrames](https://framesjs.org/middle
    - **Purpose**: To create (mint) a new token or NFT.
    - **Parameters**:
      - `transaction_type=mint` indicates the minting of a new NFT.
-     - `collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0` specifies the NFT collection.
-     - `token_id=1` specifies the unique identifier of the NFT within the collection.
+     - `collection=` specifies the NFT collection.
+     - `token_id=` specifies the unique identifier of the NFT within the collection.
 
 ## Testing
 
@@ -47,7 +47,7 @@ Here are the three testing URLs based on your requirements:
    https://base-tx-frame.vercel.app/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
    ```
 
-3. **Mint the collection (assuming you want to mint a specific token ID from a collection):**
+3. **Mint the collection (with example of tokenId and collection):**
 
    ```
    https://base-tx-frame.vercel.app/?transaction_type=mint&buttonName=Mint&collection=0x73a333cb82862d4f66f0154229755b184fb4f5b0&token_id=1
