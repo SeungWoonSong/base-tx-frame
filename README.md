@@ -40,11 +40,11 @@ Here are the three testing URLs based on your requirements:
 2. **Swap 1 USDC to DAI:**
 
    ```
-   http://localhost:3000/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+   https://base-tx-frame.vercel.app/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
    ```
 
    ```
-   https://base-tx-frame.vercel.app/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
+   http://localhost:3000/?transaction_type=swap&buttonName=Swap&amount=1&token_from=USDC&token_to=DAI
    ```
 
 3. **Mint the collection (with example of tokenId and collection):**
