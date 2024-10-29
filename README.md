@@ -33,7 +33,6 @@ Here are the three testing URLs based on your requirements:
 1. **Send 1 USDC to `0x73a333cb82862d4f66f0154229755b184fb4f5b0`:**
 
 ```
-
 https://base-tx-frame.vercel.app/?transaction_type=send&buttonName=Send&amount=1&token=USDC&receiver=0x73a333cb82862d4f66f0154229755b184fb4f5b0
 ```
 
