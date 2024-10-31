@@ -7,9 +7,15 @@ export async function POST(req: NextRequest) {
   const token = searchParams.get("token") || "";
   const amount = searchParams.get("amount") || "";
   const receiverAddress = searchParams.get("receiver") || "";
+  const buttonName = searchParams.get("buttonName") || "";
 
   try {
-    const txCalldata = await transfer(token, amount, receiverAddress);
+    const txCalldata = await transfer(
+      token,
+      amount,
+      receiverAddress,
+      buttonName
+    );
     return NextResponse.json(txCalldata);
   } catch (e) {
     console.log("send error", e);

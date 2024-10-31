@@ -249,7 +249,7 @@ const handler = frames(async (ctx) => {
               action="link"
               target={`https://basescan.org/address/${userAddress}`}
             >
-              See account on Basescan
+              Basescan
             </Button>,
             <Button
               key="2"
@@ -440,10 +440,10 @@ const handler = frames(async (ctx) => {
       ctx.url.searchParams.get("receiver") || ctx.message?.inputText || "";
     const isValidReceiverAddress =
       !!receiverAddress && isAddress(receiverAddress);
-
+    const buttonName = ctx.url.searchParams.get("buttonName") || "";
     const token = ctx.url.searchParams.get("token")?.toUpperCase() || "";
     const isValidToken = !!token && isApprovedToken(CHAIN_ID, token);
-
+    console.log(buttonName);
     const amount =
       ctx.url.searchParams.get("amount") || ctx.message?.inputText || "";
     const isValidAmount =
@@ -619,7 +619,8 @@ const handler = frames(async (ctx) => {
       isValidReceiverAddress &&
       isValidToken &&
       isValidAmount &&
-      userAddress
+      userAddress &&
+      buttonName
     ) {
       const userBalance = await getTokenBalance(userAddress, token);
       const tokenInDecimals = await checkTokenDecimals(TOKENS[CHAIN_ID][token]);
@@ -659,7 +660,7 @@ const handler = frames(async (ctx) => {
               action="link"
               target={`https://basescan.org/address/${userAddress}`}
             >
-              See account on Basescan
+              Basescan
             </Button>,
             <Button
               key="2"
@@ -720,7 +721,7 @@ const handler = frames(async (ctx) => {
           target={`/api/send/?receiver=${receiverAddress}&token=${token}&amount=${amount}`}
           post_url={`/transaction-result?transaction_type=send&receiver=${receiverAddress}&token=${token}&amount=${amount}`}
         >
-          Complete send
+          {buttonName ?? "Complete send"}
         </Button>,
       ],
     };

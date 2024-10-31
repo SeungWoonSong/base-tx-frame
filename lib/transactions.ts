@@ -120,7 +120,8 @@ export async function approveForSwap(tokenIn: string, amount: string) {
 export async function transfer(
   tokenIn: string,
   amount: string,
-  receiverAddress: string
+  receiverAddress: string,
+  buttonName?: string
 ) {
   if (!tokenIn || !amount || !receiverAddress) {
     throw new Error("Invalid transfer parameters");
@@ -135,7 +136,7 @@ export async function transfer(
     functionName: "transfer",
     args: [receiverAddress as `0x${string}`, BigInt(amountIn)],
   });
-
+  console.log(buttonName);
   return {
     chainId: "eip155:".concat(CHAIN_ID.toString()),
     method: "eth_sendTransaction",
@@ -144,6 +145,7 @@ export async function transfer(
       to: tokenInAddress === NATIVE_TOKEN ? receiverAddress : tokenInAddress,
       data: tokenInAddress === NATIVE_TOKEN ? "" : transferData,
       value: tokenInAddress === NATIVE_TOKEN ? amountIn.toString() : "0",
+      buttonName: buttonName,
     },
   };
 }
