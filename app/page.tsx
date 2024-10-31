@@ -38,7 +38,7 @@ export default async function Home() {
           <div className="text-lg sm:text-sm font-medium">
             for more details, check the{" "}
             <Link
-              href={"https://github.com/fabriguespe/defiframe"}
+              href={"https://github.com/ephemerahq/base-tx-frame"}
               target="_blank"
               className="underline"
             >
