@@ -136,7 +136,6 @@ export async function transfer(
     functionName: "transfer",
     args: [receiverAddress as `0x${string}`, BigInt(amountIn)],
   });
-  console.log(buttonName);
   return {
     chainId: "eip155:".concat(CHAIN_ID.toString()),
     method: "eth_sendTransaction",

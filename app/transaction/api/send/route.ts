@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   const token = searchParams.get("token") || "";
   const amount = searchParams.get("amount") || "";
   const receiverAddress = searchParams.get("receiver") || "";
-  const buttonName = searchParams.get("buttonName") || "";
+  const buttonName = searchParams.get("buttonName") || "Send";
 
   try {
     const txCalldata = await transfer(

@@ -440,10 +440,9 @@ const handler = frames(async (ctx) => {
       ctx.url.searchParams.get("receiver") || ctx.message?.inputText || "";
     const isValidReceiverAddress =
       !!receiverAddress && isAddress(receiverAddress);
-    const buttonName = ctx.url.searchParams.get("buttonName") || "";
+    const buttonName = ctx.url.searchParams.get("buttonName") || "Send";
     const token = ctx.url.searchParams.get("token")?.toUpperCase() || "";
     const isValidToken = !!token && isApprovedToken(CHAIN_ID, token);
-    console.log(buttonName);
     const amount =
       ctx.url.searchParams.get("amount") || ctx.message?.inputText || "";
     const isValidAmount =
@@ -721,7 +720,7 @@ const handler = frames(async (ctx) => {
           target={`/api/send/?receiver=${receiverAddress}&token=${token}&amount=${amount}`}
           post_url={`/transaction-result?transaction_type=send&receiver=${receiverAddress}&token=${token}&amount=${amount}`}
         >
-          {buttonName ?? "Complete send"}
+          {buttonName}
         </Button>,
       ],
     };
